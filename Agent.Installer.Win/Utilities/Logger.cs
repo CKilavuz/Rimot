@@ -2,11 +2,11 @@
 using System.IO;
 using System.Linq;
 
-namespace Remotely.Agent.Installer.Win.Utilities
+namespace Rimot.Agent.Installer.Win.Utilities
 {
     public class Logger
     {
-        private static string LogPath => Path.Combine(Path.GetTempPath(), "Remotely_Installer.log");
+        private static string LogPath => Path.Combine(Path.GetTempPath(), "Rimot_Installer.log");
         private static object WriteLock { get; } = new object();
         public static void Debug(string message)
         {
