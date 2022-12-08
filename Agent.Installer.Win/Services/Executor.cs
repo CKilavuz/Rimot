@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Remotely.Agent.Installer.Win.Services
+namespace Rimot.Agent.Installer.Win.Services
 {
     public class Executor : ICommand
     {
