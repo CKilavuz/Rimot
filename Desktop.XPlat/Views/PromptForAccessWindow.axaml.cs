@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using System;
 
-namespace Remotely.Desktop.XPlat.Views
+namespace Rimot.Desktop.XPlat.Views
 {
     public class PromptForAccessWindow : Window
     {
