@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Remotely.Desktop.Core
+namespace Rimot.Desktop.Core
 {
     public class ServiceContainer
     {
