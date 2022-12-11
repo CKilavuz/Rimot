@@ -5,18 +5,18 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Remotely.Desktop.Core;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Services;
-using Remotely.Desktop.XPlat.Services;
-using Remotely.Desktop.XPlat.Views;
-using Remotely.Shared.Utilities;
+using Rimot.Desktop.Core;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Services;
+using Rimot.Desktop.XPlat.Services;
+using Rimot.Desktop.XPlat.Views;
+using Rimot.Shared.Utilities;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.XPlat
+namespace Rimot.Desktop.XPlat
 {
     public class App : Application
     {
