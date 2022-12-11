@@ -1,7 +1,7 @@
-﻿using Remotely.Shared.Models;
+﻿using Rimot.Shared.Models;
 using System;
 
-namespace Remotely.Desktop.Core.Interfaces
+namespace Rimot.Desktop.Core.Interfaces
 {
     public interface ICursorIconWatcher
     {
