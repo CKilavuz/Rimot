@@ -1,8 +1,8 @@
-﻿using Remotely.Desktop.Core;
-using Remotely.Desktop.Core.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core;
+using Rimot.Desktop.Core.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Xml;
 
-namespace Remotely.Desktop.Win.Services
+namespace Rimot.Desktop.Win.Services
 {
     public interface IClickOnceService
     {
