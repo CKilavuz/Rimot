@@ -2,12 +2,12 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
-using Remotely.Desktop.Core;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.XPlat.Controls;
+using Rimot.Desktop.Core;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.XPlat.Controls;
 using System;
 
-namespace Remotely.Desktop.XPlat.Views
+namespace Rimot.Desktop.XPlat.Views
 {
     public class SessionIndicatorWindow : Window
     {
