@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public interface IExternalScriptingShell
     {
