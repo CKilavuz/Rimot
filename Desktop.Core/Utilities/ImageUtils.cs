@@ -1,7 +1,7 @@
 ﻿using Microsoft.IO;
-using Remotely.Desktop.Core.Extensions;
-using Remotely.Shared;
-using Remotely.Shared.Utilities;
+using Rimot.Desktop.Core.Extensions;
+using Rimot.Shared;
+using Rimot.Shared.Utilities;
 using SkiaSharp;
 using SkiaSharp.Views.Desktop;
 using System;
@@ -13,7 +13,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.Core.Utilities
+namespace Rimot.Desktop.Core.Utilities
 {
     public class ImageUtils
     {
