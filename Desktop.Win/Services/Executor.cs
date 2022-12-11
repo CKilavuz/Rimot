@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Remotely.Desktop.Win.Services
+namespace Rimot.Desktop.Win.Services
 {
     public class Executor : ICommand
     {
