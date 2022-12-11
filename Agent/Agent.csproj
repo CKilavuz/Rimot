@@ -5,16 +5,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright ©  2021 Translucency Software</Copyright>
-    <Description>Background service that maintains a connection to the Remotely server.  The service is used for remote support and maintenance by this computer's administrators.</Description>
+    <Copyright>Copyright ©  2022 Qits Software</Copyright>
+    <Description>Background service that maintains a connection to the Rimot server.  The service is used for remote support and maintenance by this computer's administrators.</Description>
     <Authors>Jared Goodwin</Authors>
-    <Product>Remotely Agent</Product>
+    <Product>Rimot Agent</Product>
     <Company>Translucency Software</Company>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <PackageProjectUrl>https://remotely.one</PackageProjectUrl>
+    <PackageProjectUrl>https://rimot.one</PackageProjectUrl>
     <Platforms>AnyCPU;x86;x64</Platforms>
-    <AssemblyName>Remotely_Agent</AssemblyName>
-    <RootNamespace>Remotely.Agent</RootNamespace>
+    <AssemblyName>Rimot_Agent</AssemblyName>
+    <RootNamespace>Rimot.Agent</RootNamespace>
     <ApplicationIcon>Assets\favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
