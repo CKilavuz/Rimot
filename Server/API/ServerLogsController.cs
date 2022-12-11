@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Remotely.Server.Auth;
-using Remotely.Server.Services;
+using Rimot.Server.Auth;
+using Rimot.Server.Services;
 using System.Text;
 using System.Text.Json;
 
-namespace Remotely.Server.API
+namespace Rimot.Server.API
 {
     [Route("api/[controller]")]
     [ApiController]
