@@ -1,9 +1,9 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Shared.Models;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Shared.Models;
 using System;
 using System.Drawing;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class CursorIconWatcherLinux : ICursorIconWatcher
     {
