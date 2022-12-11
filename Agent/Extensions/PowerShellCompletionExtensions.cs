@@ -1,5 +1,5 @@
-﻿using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Extensions
+namespace Rimot.Agent.Extensions
 {
     public static class PowerShellCompletionExtensions
     {
