@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public interface IUpdateDownloader
     {
