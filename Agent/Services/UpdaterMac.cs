@@ -1,5 +1,5 @@
-using Remotely.Agent.Interfaces;
-using Remotely.Shared.Utilities;
+using Rimot.Agent.Interfaces;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,7 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public class UpdaterMac : IUpdater
     {
@@ -71,7 +71,7 @@ namespace Remotely.Agent.Services
                 var connectionInfo = _configService.GetConnectionInfo();
                 var serverUrl = _configService.GetConnectionInfo().Host;
 
-                var fileUrl = serverUrl + $"/Content/Remotely-MacOS-{_achitecture}.zip";
+                var fileUrl = serverUrl + $"/Content/Rimot-MacOS-{_achitecture}.zip";
 
                 using var httpClient = _httpClientFactory.CreateClient();
                 using var request = new HttpRequestMessage(HttpMethod.Head, fileUrl);
@@ -126,9 +126,9 @@ namespace Remotely.Agent.Services
                 Logger.Write("Service Updater: Downloading install package.");
 
                 var downloadId = Guid.NewGuid().ToString();
-                var zipPath = Path.Combine(Path.GetTempPath(), "RemotelyUpdate.zip");
+                var zipPath = Path.Combine(Path.GetTempPath(), "RimotUpdate.zip");
 
-                var installerPath = Path.Combine(Path.GetTempPath(), "RemotelyUpdate.sh");
+                var installerPath = Path.Combine(Path.GetTempPath(), "RimotUpdate.sh");
 
                 await _updateDownloader.DownloadFile(
                        $"{serverUrl}/API/ClientDownloads/{connectionInfo.OrganizationID}/MacOSInstaller-{_achitecture}",
