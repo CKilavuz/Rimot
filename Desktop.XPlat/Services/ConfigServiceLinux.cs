@@ -1,16 +1,16 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.IO;
 using System.Text.Json;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class ConfigServiceLinux : IConfigService
     {
         private static string ConfigFile => Path.Combine(ConfigFolder, "Config.json");
-        private static string ConfigFolder => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "remotely.json");
+        private static string ConfigFolder => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "rimot.json");
 
         public DesktopAppConfig GetConfig()
         {
