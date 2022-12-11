@@ -1,4 +1,4 @@
-﻿namespace Remotely.Agent.Services
+﻿namespace Rimot.Agent.Services
 {
     partial class WindowsService
     {
