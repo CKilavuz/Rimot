@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Thanks for trying Remotely!"
+echo "Thanks for trying Rimot!"
 echo
 
 Args=( "$@" )
@@ -15,19 +15,19 @@ do
 done
 
 if [ -z "$AppRoot" ]; then
-    read -p "Enter path where the Remotely server files should be installed (typically /var/www/remotely): " AppRoot
+    read -p "Enter path where the Rimot server files should be installed (typically /var/www/rimot): " AppRoot
     if [ -z "$AppRoot" ]; then
-        AppRoot="/var/www/remotely"
+        AppRoot="/var/www/rimot"
     fi
 fi
 
 if [ -z "$HostName" ]; then
-    read -p "Enter server host (e.g. remotely.yourdomainname.com): " HostName
+    read -p "Enter server host (e.g. rimot.yourdomainname.com): " HostName
 fi
 
-chmod +x "$AppRoot/Remotely_Server"
+chmod +x "$AppRoot/Rimot_Server"
 
-echo "Using $AppRoot as the Remotely website's content directory."
+echo "Using $AppRoot as the Rimot website's content directory."
 
 apt-get -y install curl
 apt-get -y install software-properties-common
@@ -58,10 +58,10 @@ apt-get -y install libc6-dev
 apt-get -y install libgdiplus
 
 
-# Set permissions on Remotely files.
+# Set permissions on Rimot files.
 setfacl -R -m u:www-data:rwx $AppRoot
 chown -R "$USER":www-data $AppRoot
-chmod +x "$AppRoot/Remotely_Server"
+chmod +x "$AppRoot/Rimot_Server"
 
 
 # Install Nginx
@@ -130,9 +130,9 @@ server {
     }
 }"
 
-echo "$nginxConfig" > /etc/nginx/sites-available/remotely
+echo "$nginxConfig" > /etc/nginx/sites-available/rimot
 
-ln -s /etc/nginx/sites-available/remotely /etc/nginx/sites-enabled/remotely
+ln -s /etc/nginx/sites-available/rimot /etc/nginx/sites-enabled/rimot
 
 # Test config.
 nginx -t
@@ -146,15 +146,15 @@ nginx -s reload
 # Create service.
 
 serviceConfig="[Unit]
-Description=Remotely Server
+Description=Rimot Server
 
 [Service]
 WorkingDirectory=$AppRoot
-ExecStart=/usr/bin/dotnet $AppRoot/Remotely_Server.dll
+ExecStart=/usr/bin/dotnet $AppRoot/Rimot_Server.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
-SyslogIdentifier=remotely
+SyslogIdentifier=rimot
 User=www-data
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
@@ -162,13 +162,13 @@ Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 [Install]
 WantedBy=multi-user.target"
 
-echo "$serviceConfig" > /etc/systemd/system/remotely.service
+echo "$serviceConfig" > /etc/systemd/system/rimot.service
 
 
 # Enable service.
-systemctl enable remotely.service
+systemctl enable rimot.service
 # Start service.
-systemctl restart remotely.service
+systemctl restart rimot.service
 
 
 # Install Certbot and get SSL cert.
