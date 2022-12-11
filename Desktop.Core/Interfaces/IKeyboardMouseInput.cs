@@ -1,7 +1,7 @@
-﻿using Remotely.Desktop.Core.Enums;
-using Remotely.Desktop.Core.Services;
+﻿using Rimot.Desktop.Core.Enums;
+using Rimot.Desktop.Core.Services;
 
-namespace Remotely.Desktop.Core.Interfaces
+namespace Rimot.Desktop.Core.Interfaces
 {
     public interface IKeyboardMouseInput
     {
