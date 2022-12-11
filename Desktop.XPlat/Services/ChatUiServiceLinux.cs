@@ -1,10 +1,10 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Threading;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.XPlat.Controls;
-using Remotely.Desktop.XPlat.ViewModels;
-using Remotely.Desktop.XPlat.Views;
-using Remotely.Shared.Models;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.XPlat.Controls;
+using Rimot.Desktop.XPlat.ViewModels;
+using Rimot.Desktop.XPlat.Views;
+using Rimot.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class ChatUiServiceLinux : IChatUiService
     {
