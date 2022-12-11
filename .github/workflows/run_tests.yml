@@ -21,7 +21,7 @@ jobs:
     env:
       Solution_Name: Rimot.sln                               # Replace with your solution name, i.e. MyWpfApp.sln.
       Configuration: ${{ matrix.configuration }}
-      Test_Project_Path: Tests\Tests.csproj                     # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      Test_Project_Path: Tests\Rimot-test.csproj                     # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
 
     steps:
     - name: Checkout
