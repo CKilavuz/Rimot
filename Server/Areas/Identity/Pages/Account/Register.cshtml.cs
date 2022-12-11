@@ -13,24 +13,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using Remotely.Server.Services;
-using Remotely.Shared.Models;
+using Rimot.Server.Services;
+using Rimot.Shared.Models;
 
-namespace Remotely.Server.Areas.Identity.Pages.Account
+namespace Rimot.Server.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<RemotelyUser> _signInManager;
-        private readonly UserManager<RemotelyUser> _userManager;
+        private readonly SignInManager<RimotUser> _signInManager;
+        private readonly UserManager<RimotUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSenderEx _emailSender;
         private readonly IDataService _dataService;
         private readonly IApplicationConfig _appConfig;
 
         public RegisterModel(
-            UserManager<RemotelyUser> userManager,
-            SignInManager<RemotelyUser> signInManager,
+            UserManager<RimotUser> userManager,
+            SignInManager<RimotUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSenderEx emailSender,
             IDataService dataService,
@@ -89,13 +89,13 @@ namespace Remotely.Server.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new RemotelyUser
+                var user = new RimotUser
                 {
                     UserName = Input.Email,
                     Email = Input.Email,
                     IsServerAdmin = organizationCount == 0,
                     Organization = new Organization(),
-                    UserOptions = new RemotelyUserOptions(),
+                    UserOptions = new RimotUserOptions(),
                     IsAdministrator = true
                 };
 
