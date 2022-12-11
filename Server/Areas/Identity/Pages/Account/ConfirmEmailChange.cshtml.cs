@@ -8,17 +8,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Remotely.Shared.Models;
+using Rimot.Shared.Models;
 
-namespace Remotely.Server.Areas.Identity.Pages.Account
+namespace Rimot.Server.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ConfirmEmailChangeModel : PageModel
     {
-        private readonly UserManager<RemotelyUser> _userManager;
-        private readonly SignInManager<RemotelyUser> _signInManager;
+        private readonly UserManager<RimotUser> _userManager;
+        private readonly SignInManager<RimotUser> _signInManager;
 
-        public ConfirmEmailChangeModel(UserManager<RemotelyUser> userManager, SignInManager<RemotelyUser> signInManager)
+        public ConfirmEmailChangeModel(UserManager<RimotUser> userManager, SignInManager<RimotUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
