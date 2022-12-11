@@ -1,10 +1,10 @@
-﻿using Remotely.Shared;
+﻿using Rimot.Shared;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Remotely.Desktop.Core.Interfaces
+namespace Rimot.Desktop.Core.Interfaces
 {
     public interface IScreenCapturer : IDisposable
     {
