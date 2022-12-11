@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Interfaces
+namespace Rimot.Agent.Interfaces
 {
     public interface IUpdater
     {
