@@ -1,9 +1,9 @@
 ﻿using Avalonia.Controls;
 using ReactiveUI;
-using Remotely.Desktop.XPlat.Services;
+using Rimot.Desktop.XPlat.Services;
 using System.Windows.Input;
 
-namespace Remotely.Desktop.XPlat.ViewModels
+namespace Rimot.Desktop.XPlat.ViewModels
 {
     public class HostNamePromptViewModel : BrandedViewModelBase
     {
