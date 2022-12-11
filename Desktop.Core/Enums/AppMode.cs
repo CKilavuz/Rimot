@@ -1,4 +1,4 @@
-﻿namespace Remotely.Desktop.Core.Enums
+﻿namespace Rimot.Desktop.Core.Enums
 {
     public enum AppMode
     {
