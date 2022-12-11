@@ -1,10 +1,10 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Shared.Utilities;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class ClipboardServiceLinux : IClipboardService
     {
