@@ -1,8 +1,8 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Utilities;
-using Remotely.Desktop.XPlat.Native.Linux;
-using Remotely.Shared;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Utilities;
+using Rimot.Desktop.XPlat.Native.Linux;
+using Rimot.Shared;
+using Rimot.Shared.Utilities;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class ScreenCapturerLinux : IScreenCapturer
     {
