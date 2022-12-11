@@ -1,5 +1,5 @@
-﻿using Remotely.Agent.Interfaces;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Agent.Interfaces;
+using Rimot.Shared.Utilities;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public class UpdaterWin : IUpdater
     {
@@ -67,7 +67,7 @@ namespace Remotely.Agent.Services
                 var serverUrl = _configService.GetConnectionInfo().Host;
 
                 var platform = Environment.Is64BitOperatingSystem ? "x64" : "x86";
-                var fileUrl = serverUrl + $"/Content/Remotely-Win10-{platform}.zip";
+                var fileUrl = serverUrl + $"/Content/Rimot-Win10-{platform}.zip";
 
                 using var httpClient = _httpClientFactory.CreateClient();
                 using var request = new HttpRequestMessage(HttpMethod.Head, fileUrl);
@@ -122,13 +122,13 @@ namespace Remotely.Agent.Services
                 Logger.Write("Service Updater: Downloading install package.");
 
                 var downloadId = Guid.NewGuid().ToString();
-                var zipPath = Path.Combine(Path.GetTempPath(), "RemotelyUpdate.zip");
+                var zipPath = Path.Combine(Path.GetTempPath(), "RimotUpdate.zip");
 
-                var installerPath = Path.Combine(Path.GetTempPath(), "Remotely_Installer.exe");
+                var installerPath = Path.Combine(Path.GetTempPath(), "Rimot_Installer.exe");
                 var platform = Environment.Is64BitOperatingSystem ? "x64" : "x86";
 
                 await _updateDownloader.DownloadFile(
-                     $"{serverUrl}/Content/Remotely_Installer.exe",
+                     $"{serverUrl}/Content/Rimot_Installer.exe",
                      installerPath);
 
                 await _updateDownloader.DownloadFile(
@@ -138,7 +138,7 @@ namespace Remotely.Agent.Services
                 using var httpClient = _httpClientFactory.CreateClient();
                 using var response = httpClient.GetAsync($"{serverUrl}/api/AgentUpdate/ClearDownload/{downloadId}");
 
-                foreach (var proc in Process.GetProcessesByName("Remotely_Installer"))
+                foreach (var proc in Process.GetProcessesByName("Rimot_Installer"))
                 {
                     proc.Kill();
                 }
