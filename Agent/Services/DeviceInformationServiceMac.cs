@@ -1,15 +1,15 @@
-using Remotely.Agent.Interfaces;
-using Remotely.Shared.Models;
-using Remotely.Shared.Services;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.Win32;
+using Rimot.Agent.Interfaces;
+using Rimot.Shared.Models;
+using Rimot.Shared.Services;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public class DeviceInformationServiceMac : DeviceInformationServiceBase, IDeviceInformationService
     {
