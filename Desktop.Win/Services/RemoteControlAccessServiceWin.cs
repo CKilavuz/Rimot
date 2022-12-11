@@ -1,12 +1,12 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Win.ViewModels;
-using Remotely.Desktop.Win.Views;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Win.ViewModels;
+using Rimot.Desktop.Win.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.Win.Services
+namespace Rimot.Desktop.Win.Services
 {
     public class RemoteControlAccessServiceWin : IRemoteControlAccessService
     {
