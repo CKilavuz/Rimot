@@ -1,12 +1,12 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.ReactiveUI;
-using Remotely.Desktop.Core;
-using Remotely.Shared.Utilities;
+using Rimot.Desktop.Core;
+using Rimot.Shared.Utilities;
 using System;
 using System.Threading;
 
-namespace Remotely.Desktop.XPlat
+namespace Rimot.Desktop.XPlat
 {
     class Program
     {
