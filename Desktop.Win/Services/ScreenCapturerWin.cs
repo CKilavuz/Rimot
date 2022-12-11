@@ -22,11 +22,11 @@
 // THE SOFTWARE.
 
 using Microsoft.Win32;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Utilities;
-using Remotely.Desktop.Win.Models;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.Win32;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Utilities;
+using Rimot.Desktop.Win.Models;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.Win32;
 using SharpDX;
 using SharpDX.Direct3D11;
 using SharpDX.DXGI;
@@ -37,14 +37,14 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using Remotely.Shared;
-using Result = Remotely.Shared.Result;
+using Rimot.Shared;
+using Result = Rimot.Shared.Result;
 using SkiaSharp;
 using SkiaSharp.Views.Desktop;
-using Remotely.Desktop.Core.Extensions;
+using Rimot.Desktop.Core.Extensions;
 using System.Runtime.InteropServices;
 
-namespace Remotely.Desktop.Win.Services
+namespace Rimot.Desktop.Win.Services
 {
     public class ScreenCapturerWin : IScreenCapturer
     {
