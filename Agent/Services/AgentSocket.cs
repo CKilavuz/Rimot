@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
-using Remotely.Agent.Extensions;
-using Remotely.Agent.Interfaces;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.Win32;
+using Rimot.Agent.Extensions;
+using Rimot.Agent.Interfaces;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace Remotely.Agent.Services
+namespace Rimot.Agent.Services
 {
     public class AgentSocket
     {
@@ -407,7 +407,7 @@ namespace Remotely.Agent.Services
                     }
 
                     Logger.Write($"File upload started by {requesterID}.");
-                    var sharedFilePath = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), "RemotelySharedFiles")).FullName;
+                    var sharedFilePath = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), "RimotSharedFiles")).FullName;
 
                     foreach (var fileID in fileIDs)
                     {
