@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using Remotely.Desktop.XPlat.ViewModels;
+using Rimot.Desktop.XPlat.ViewModels;
 using System;
 
-namespace Remotely.Desktop.XPlat
+namespace Rimot.Desktop.XPlat
 {
     public class ViewLocator : IDataTemplate
     {
