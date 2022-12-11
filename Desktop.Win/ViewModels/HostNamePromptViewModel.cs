@@ -1,6 +1,6 @@
-﻿using Remotely.Desktop.Core.ViewModels;
+﻿using Rimot.Desktop.Core.ViewModels;
 
-namespace Remotely.Desktop.Win.ViewModels
+namespace Rimot.Desktop.Win.ViewModels
 {
     public class HostNamePromptViewModel : BrandedViewModelBase
     {
