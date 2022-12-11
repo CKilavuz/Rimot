@@ -1,11 +1,11 @@
-﻿using Remotely.Desktop.Core.Enums;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Services;
-using Remotely.Desktop.XPlat.Native.Linux;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core.Enums;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Services;
+using Rimot.Desktop.XPlat.Native.Linux;
+using Rimot.Shared.Utilities;
 using System;
 
-namespace Remotely.Desktop.XPlat.Services
+namespace Rimot.Desktop.XPlat.Services
 {
     public class KeyboardMouseInputLinux : IKeyboardMouseInput
     {
