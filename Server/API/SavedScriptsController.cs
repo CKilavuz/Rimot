@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Remotely.Server.Auth;
-using Remotely.Server.Services;
-using Remotely.Shared.Models;
+using Rimot.Server.Auth;
+using Rimot.Server.Services;
+using Rimot.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.API
+namespace Rimot.Server.API
 {
     [Route("api/[controller]")]
     [ApiController]
