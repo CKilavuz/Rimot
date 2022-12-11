@@ -1,9 +1,9 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Services;
-using Remotely.Desktop.Core.ViewModels;
-using Remotely.Desktop.Win.ViewModels;
-using Remotely.Desktop.Win.Views;
-using Remotely.Shared.Utilities;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Services;
+using Rimot.Desktop.Core.ViewModels;
+using Rimot.Desktop.Win.ViewModels;
+using Rimot.Desktop.Win.Views;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Remotely.Desktop.Win.Services
+namespace Rimot.Desktop.Win.Services
 {
     public class FileTransferServiceWin : IFileTransferService
     {
@@ -31,7 +31,7 @@ namespace Remotely.Desktop.Win.Services
         public string GetBaseDirectory()
         {
             var programDataPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            return Directory.CreateDirectory(Path.Combine(programDataPath, "Remotely", "Shared")).FullName;
+            return Directory.CreateDirectory(Path.Combine(programDataPath, "Rimot", "Shared")).FullName;
         }
 
         public void OpenFileTransferWindow(Viewer viewer)
