@@ -2,13 +2,13 @@
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Remotely.Desktop.XPlat.ViewModels;
-using Remotely.Shared.Utilities;
+using Rimot.Desktop.XPlat.ViewModels;
+using Rimot.Shared.Utilities;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.XPlat.Controls
+namespace Rimot.Desktop.XPlat.Controls
 {
     public class MessageBox : Window
     {
