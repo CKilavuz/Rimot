@@ -1,10 +1,10 @@
-﻿using Remotely.Shared.Utilities;
+﻿using Rimot.Shared.Utilities;
 using SharpDX.Direct3D11;
 using SharpDX.DXGI;
 using System;
 using System.Drawing;
 
-namespace Remotely.Desktop.Win.Models
+namespace Rimot.Desktop.Win.Models
 {
     public class DirectXOutput : IDisposable
     {
