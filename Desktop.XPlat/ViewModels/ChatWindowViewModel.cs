@@ -1,14 +1,14 @@
 ﻿using Avalonia.Controls;
 using ReactiveUI;
-using Remotely.Desktop.XPlat.Services;
-using Remotely.Shared.Models;
+using Rimot.Desktop.XPlat.Services;
+using Rimot.Shared.Models;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Remotely.Desktop.XPlat.ViewModels
+namespace Rimot.Desktop.XPlat.ViewModels
 {
     public class ChatWindowViewModel : BrandedViewModelBase
     {
