@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Caching.Memory;
-using Remotely.Server.Services;
-using Remotely.Shared.Utilities;
+using Rimot.Server.Services;
+using Rimot.Shared.Utilities;
 using System;
 
-namespace Remotely.Server.Auth
+namespace Rimot.Server.Auth
 {
     public class RemoteControlFilterAttribute : ActionFilterAttribute, IAuthorizationFilter
     {
