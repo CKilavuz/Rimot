@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using Remotely.Server.Models;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
+using Rimot.Server.Models;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Hubs
+namespace Rimot.Server.Hubs
 {
     public class CasterHub : Hub
     {
