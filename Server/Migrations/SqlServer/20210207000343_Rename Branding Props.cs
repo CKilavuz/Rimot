@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Remotely.Server.Migrations.SqlServer
+namespace Rimot.Server.Migrations.SqlServer
 {
     public partial class RenameBrandingProps : Migration
     {
