@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Remotely.Server.Migrations.Sqlite
+namespace Rimot.Server.Migrations.Sqlite
 {
     public partial class Alerts : Migration
     {
@@ -33,9 +33,9 @@ namespace Remotely.Server.Migrations.Sqlite
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Alerts_RemotelyUsers_UserID",
+                        name: "FK_Alerts_RimotUsers_UserID",
                         column: x => x.UserID,
-                        principalTable: "RemotelyUsers",
+                        principalTable: "RimotUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
