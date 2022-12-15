@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Components.Server.Circuits;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
-using Remotely.Server.Auth;
-using Remotely.Server.Models;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Server.Auth;
+using Rimot.Server.Models;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -18,12 +18,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Hubs
+namespace Rimot.Server.Hubs
 {
     public interface ICircuitConnection
     {
         event EventHandler<CircuitEvent> MessageReceived;
-        RemotelyUser User { get; }
+        RimotUser User { get; }
 
         Task DeleteRemoteLogs(string deviceId);
 
@@ -90,7 +90,7 @@ namespace Remotely.Server.Hubs
         public event EventHandler<CircuitEvent> MessageReceived;
 
         public string ConnectionId { get; set; }
-        public RemotelyUser User { get; set; }
+        public RimotUser User { get; set; }
 
 
         public Task DeleteRemoteLogs(string deviceId)
@@ -242,7 +242,7 @@ namespace Remotely.Server.Hubs
             string username;
             if (runAsHostedService)
             {
-                username = "Remotely Server";
+                username = "Rimot Server";
             }
             else
             {
