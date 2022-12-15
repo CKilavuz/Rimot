@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Remotely.Server.Migrations.SqlServer
+namespace Rimot.Server.Migrations.SqlServer
 {
     public partial class AddScriptSchedules : Migration
     {
@@ -16,7 +16,7 @@ namespace Remotely.Server.Migrations.SqlServer
 
             migrationBuilder.DropColumn(
                 name: "DisplayName",
-                table: "RemotelyUsers");
+                table: "RimotUsers");
 
             migrationBuilder.DropColumn(
                 name: "Token",
@@ -50,9 +50,9 @@ namespace Remotely.Server.Migrations.SqlServer
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_SavedScripts_RemotelyUsers_CreatorId",
+                        name: "FK_SavedScripts_RimotUsers_CreatorId",
                         column: x => x.CreatorId,
-                        principalTable: "RemotelyUsers",
+                        principalTable: "RimotUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -84,9 +84,9 @@ namespace Remotely.Server.Migrations.SqlServer
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_ScriptSchedules_RemotelyUsers_CreatorId",
+                        name: "FK_ScriptSchedules_RimotUsers_CreatorId",
                         column: x => x.CreatorId,
-                        principalTable: "RemotelyUsers",
+                        principalTable: "RimotUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -368,7 +368,7 @@ namespace Remotely.Server.Migrations.SqlServer
 
             migrationBuilder.AddColumn<string>(
                 name: "DisplayName",
-                table: "RemotelyUsers",
+                table: "RimotUsers",
                 type: "nvarchar(100)",
                 maxLength: 100,
                 nullable: true);
