@@ -5,9 +5,9 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>Remotely.Server.Tests</RootNamespace>
+    <RootNamespace>Rimot.Server.Tests</RootNamespace>
 
-    <AssemblyName>Remotely.Server.Tests</AssemblyName>
+    <AssemblyName>Rimot.Server.Tests</AssemblyName>
 
     <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
