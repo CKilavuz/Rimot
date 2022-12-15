@@ -3,15 +3,15 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
-using Remotely.Server.Auth;
-using Remotely.Server.Enums;
-using Remotely.Server.Hubs;
-using Remotely.Server.Models;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.ViewModels;
+using Rimot.Server.Auth;
+using Rimot.Server.Enums;
+using Rimot.Server.Hubs;
+using Rimot.Server.Models;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.ViewModels;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Components.Devices
+namespace Rimot.Server.Components.Devices
 {
     public partial class DeviceCard : AuthComponentBase, IDisposable
     {
