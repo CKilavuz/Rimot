@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Remotely.Server.Services;
+using Rimot.Server.Services;
 using System;
 
-namespace Remotely.Server.Data
+namespace Rimot.Server.Data
 {
     public interface IAppDbFactory
     {
