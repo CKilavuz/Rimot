@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Remotely.Server.Migrations.PostgreSql
+namespace Rimot.Server.Migrations.PostgreSql
 {
     public partial class Manytomany : Migration
     {
@@ -10,7 +10,7 @@ namespace Remotely.Server.Migrations.PostgreSql
                 name: "PermissionLinks");
 
             migrationBuilder.CreateTable(
-                name: "DeviceGroupRemotelyUser",
+                name: "DeviceGroupRimotUser",
                 columns: table => new
                 {
                     DeviceGroupsID = table.Column<string>(type: "text", nullable: false),
@@ -18,31 +18,31 @@ namespace Remotely.Server.Migrations.PostgreSql
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DeviceGroupRemotelyUser", x => new { x.DeviceGroupsID, x.UsersId });
+                    table.PrimaryKey("PK_DeviceGroupRimotUser", x => new { x.DeviceGroupsID, x.UsersId });
                     table.ForeignKey(
-                        name: "FK_DeviceGroupRemotelyUser_DeviceGroups_DeviceGroupsID",
+                        name: "FK_DeviceGroupRimotUser_DeviceGroups_DeviceGroupsID",
                         column: x => x.DeviceGroupsID,
                         principalTable: "DeviceGroups",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DeviceGroupRemotelyUser_RemotelyUsers_UsersId",
+                        name: "FK_DeviceGroupRimotUser_RimotUsers_UsersId",
                         column: x => x.UsersId,
-                        principalTable: "RemotelyUsers",
+                        principalTable: "RimotUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_DeviceGroupRemotelyUser_UsersId",
-                table: "DeviceGroupRemotelyUser",
+                name: "IX_DeviceGroupRimotUser_UsersId",
+                table: "DeviceGroupRimotUser",
                 column: "UsersId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DeviceGroupRemotelyUser");
+                name: "DeviceGroupRimotUser");
 
             migrationBuilder.CreateTable(
                 name: "PermissionLinks",
@@ -62,9 +62,9 @@ namespace Remotely.Server.Migrations.PostgreSql
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_PermissionLinks_RemotelyUsers_UserID",
+                        name: "FK_PermissionLinks_RimotUsers_UserID",
                         column: x => x.UserID,
-                        principalTable: "RemotelyUsers",
+                        principalTable: "RimotUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
