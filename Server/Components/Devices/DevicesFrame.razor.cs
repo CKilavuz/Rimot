@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Remotely.Server.Enums;
-using Remotely.Server.Hubs;
-using Remotely.Server.Models;
-using Remotely.Server.Services;
-using Remotely.Shared.Attributes;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Server.Enums;
+using Rimot.Server.Hubs;
+using Rimot.Server.Models;
+using Rimot.Server.Services;
+using Rimot.Shared.Attributes;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -19,7 +19,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Components.Devices
+namespace Rimot.Server.Components.Devices
 {
     [Authorize]
     public partial class DevicesFrame : AuthComponentBase, IDisposable
