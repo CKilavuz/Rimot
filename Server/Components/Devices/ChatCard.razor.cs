@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Remotely.Server.Hubs;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.ViewModels;
+using Rimot.Server.Hubs;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Components.Devices
+namespace Rimot.Server.Components.Devices
 {
     public partial class ChatCard : AuthComponentBase, IDisposable
     {
