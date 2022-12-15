@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR;
-using Remotely.Server.Hubs;
-using Remotely.Server.Migrations.PostgreSql;
-using Remotely.Server.Migrations.Sqlite;
-using Remotely.Server.Migrations.SqlServer;
-using Remotely.Server.Pages;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Server.Hubs;
+using Rimot.Server.Migrations.PostgreSql;
+using Rimot.Server.Migrations.Sqlite;
+using Rimot.Server.Migrations.SqlServer;
+using Rimot.Server.Pages;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Components.Scripts
+namespace Rimot.Server.Components.Scripts
 {
     [Authorize]
     public partial class RunScript : AuthComponentBase
