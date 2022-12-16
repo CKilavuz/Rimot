@@ -7,9 +7,9 @@
 
     <IsPackable>false</IsPackable>
 
-    <AssemblyName>Remotely.Shared.Tests</AssemblyName>
+    <AssemblyName>Rimot.Shared.Tests</AssemblyName>
 
-    <RootNamespace>Remotely.Shared.Tests</RootNamespace>
+    <RootNamespace>Rimot.Shared.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
