@@ -1,4 +1,4 @@
-﻿using Remotely.Shared.Enums;
+﻿using Rimot.Shared.Enums;
 using System;
 using System.Diagnostics;
 
