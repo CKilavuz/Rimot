@@ -1,4 +1,4 @@
-﻿namespace Remotely.Shared.Enums
+﻿namespace Rimot.Shared.Enums
 {
     public enum RemoteControlMode
     {
