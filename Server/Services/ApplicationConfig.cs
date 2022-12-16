@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
 using System;
 
-namespace Remotely.Server.Services
+namespace Rimot.Server.Services
 {
     public interface IApplicationConfig
     {
