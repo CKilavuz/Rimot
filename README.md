@@ -1,8 +1,5 @@
-# Remotely
+# Rimot
 A remote control and remote scripting solution, built with .NET 6, Blazor, SignalR Core, and WebRTC.
-
-[![Build Status](https://dev.azure.com/translucency/Remotely/_apis/build/status/Remotely-ReleaseBuild?branchName=master)](https://dev.azure.com/translucency/Remotely/_build/latest?definitionId=17&branchName=master)
-![GitHub Build](https://github.com/immense/Remotely/workflows/GitHub%20Build/badge.svg)
 
 
 # Status 
@@ -18,11 +15,6 @@ ImmyBot experienced explosive growth this year and we only have 4 developers whi
 
 * Complete Remotely <-> ImmyBot Integration (2022)
 * Offer a cloud version of Remotely for individuals that do not wish to host it themselves (2023)
-
-## Project Links
-Subreddit: https://www.reddit.com/r/remotely_app/  
-Docker: https://hub.docker.com/r/translucency/remotely  
-Video Tutorials: https://remotely.one/Tutorials  
 
 ![image](.github/media/ask-remote.png)
 
