@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Remotely.Shared.Models
+namespace Rimot.Shared.Models
 {
-    public class RemotelyUser : IdentityUser
+    public class RimotUser : IdentityUser
     {
         public ICollection<Alert> Alerts { get; set; }
 
