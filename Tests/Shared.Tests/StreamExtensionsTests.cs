@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
-using Remotely.Shared.Extensions;
+using Rimot.Shared.Extensions;
 
-namespace Remotely.Shared.Tests
+namespace Rimot.Shared.Tests
 {
     [TestClass]
     public class StreamExtensionsTests
