@@ -7,16 +7,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Primitives;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Remotely.Server.API;
-using Remotely.Server.Data;
-using Remotely.Server.Services;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Server.API;
+using Rimot.Server.Data;
+using Rimot.Server.Services;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace Remotely.Tests
+namespace Rimot.Tests
 {
     [TestClass]
     public class IoCActivator
@@ -57,7 +57,7 @@ namespace Remotely.Tests
         {
             services.AddDbContext<AppDb, TestingDbContext>();
 
-            services.AddIdentity<RemotelyUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128)
+            services.AddIdentity<RimotUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128)
              .AddEntityFrameworkStores<AppDb>()
              .AddDefaultUI()
              .AddDefaultTokenProviders();
