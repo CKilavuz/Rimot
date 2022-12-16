@@ -3,13 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Remotely.Desktop.Core;
-using Remotely.Desktop.Core.Interfaces;
-using Remotely.Desktop.Core.Services;
-using Remotely.Desktop.Core.Utilities;
-using Remotely.Desktop.Win.Services;
-using Remotely.Shared.Models;
-using Remotely.Shared.Models.RemoteControlDtos;
+using Rimot.Desktop.Core;
+using Rimot.Desktop.Core.Interfaces;
+using Rimot.Desktop.Core.Services;
+using Rimot.Desktop.Core.Utilities;
+using Rimot.Desktop.Win.Services;
+using Rimot.Shared.Models;
+using Rimot.Shared.Models.RemoteControlDtos;
 using SkiaSharp;
 using SkiaSharp.Views.Desktop;
 using System;
@@ -22,7 +22,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Remotely.Tests
+namespace Rimot.Tests
 {
     [TestClass]
     public class ManualTests
@@ -351,10 +351,14 @@ namespace Remotely.Tests
 
         private SKBitmap GetImage(string imageFileName)
         {
-            using var mrs = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Remotely.Desktop.Win.Tests.Resources.{imageFileName}.jpg");
+            using var mrs = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Rimot.Desktop.Win.Tests.Resources.{imageFileName}.jpg");
             var resourceImage = (Bitmap)Bitmap.FromStream(mrs);
 
             if (resourceImage.PixelFormat != PixelFormat.Format32bppArgb)
+        private SKBitmap GetImage(string imageFileName)
+        {
+            using var mrs = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Rimot.Desktop.Win.Tests.Resources.{imageFileName}.jpg");
+            var resourceImage = (Bitmap)Bitma
             {
                 return resourceImage
                     .Clone(new Rectangle(0, 0, resourceImage.Width, resourceImage.Height), PixelFormat.Format32bppArgb)
