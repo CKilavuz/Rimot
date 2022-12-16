@@ -1,13 +1,13 @@
-﻿using Remotely.Server.Enums;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.ViewModels;
+﻿using Rimot.Server.Enums;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.ViewModels;
 using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Services
+namespace Rimot.Server.Services
 {
     public interface IClientAppState : INotifyPropertyChanged, IInvokePropertyChanged
     {
