@@ -1,19 +1,19 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Web;
-using Remotely.Server.Components;
-using Remotely.Server.Hubs;
-using Remotely.Server.Services;
-using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
-using Remotely.Shared.Utilities;
+using Rimot.Server.Components;
+using Rimot.Server.Hubs;
+using Rimot.Server.Services;
+using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
+using Rimot.Shared.Utilities;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Pages
+namespace Rimot.Server.Pages
 {
     public partial class DeviceDetails : AuthComponentBase
     {
