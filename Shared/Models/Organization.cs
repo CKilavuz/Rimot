@@ -1,10 +1,10 @@
-﻿using Remotely.Shared.Enums;
+﻿using Rimot.Shared.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Remotely.Shared.Models
+namespace Rimot.Shared.Models
 {
     public class Organization
     {
