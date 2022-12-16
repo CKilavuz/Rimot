@@ -5,8 +5,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using static Remotely.Shared.Win32.ADVAPI32;
-using static Remotely.Shared.Win32.User32;
+using static Rimot.Shared.Win32.ADVAPI32;
+using static Rimot.Shared.Win32.User32;
 
 namespace Rimot.Shared.Win32
 {
