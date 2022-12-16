@@ -1,5 +1,5 @@
 # IMPORTANT:
-# 1. The Server URL must include the scheme (e.g. https://app.rimot.one).
+# 1. The Server URL must include the scheme (e.g. https://app.rimot.support).
 
 # 2. The Server Runtime Identifier determines the target operating system
 # for which to build the server.  The default "linux-x64" will usually work
@@ -8,7 +8,7 @@
 
 # 2. You'll want to keep your fork updated so you can build the latest
 # changes.  On the GitHub page for your repo, you'll see a message that says,
-# "This branch is ## commits behind lucent-sea:master."
+# "This branch is ## commits behind rimot-support:master."
 #
 # Click the "Pull request" link next to it.
 #
