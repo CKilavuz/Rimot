@@ -15,12 +15,12 @@ namespace Rimot.Server.Pages
             _dataService = dataService;
         }
 
-        public RemotelyUser RemotelyUser { get; private set; }
+        public RimotUser RimotUser { get; private set; }
         public void OnGet()
         {
             if (User.Identity.IsAuthenticated)
             {
-                RemotelyUser = _dataService.GetUserByNameWithOrg(base.User.Identity.Name);
+                RimotUser = _dataService.GetUserByNameWithOrg(base.User.Identity.Name);
             }
         }
     }
