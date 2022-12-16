@@ -11,10 +11,10 @@
     <Description>Desktop client for allowing your IT admin to provide remote support.</Description>
     <Copyright>Copyright ©  2021 Qits Software</Copyright>
     <PackageId>Rimot Desktop</PackageId>
-    <Authors>Jared Goodwin</Authors>
+    <Authors>Smoke Head</Authors>
     <Company>Qits Software</Company>
     <Product>Rimot Desktop</Product>
-    <PackageProjectUrl>https://rimot.one</PackageProjectUrl>
+    <PackageProjectUrl>https://rimot.support</PackageProjectUrl>
     <Platforms>AnyCPU;x86;x64</Platforms>
     <StartupObject>Rimot.Desktop.Win.App</StartupObject>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
