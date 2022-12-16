@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Logging;
-using Remotely.Server.Hubs;
-using Remotely.Server.Models;
+using Rimot.Server.Hubs;
+using Rimot.Server.Models;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Remotely.Server.Services
+namespace Rimot.Server.Services
 {
     public interface ICircuitManager
     {
