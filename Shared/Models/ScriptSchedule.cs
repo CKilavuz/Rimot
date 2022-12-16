@@ -16,7 +16,7 @@ namespace Rimot.Shared.Models
         public DateTimeOffset CreatedAt { get; set; }
 
         [JsonIgnore]
-        public RemotelyUser Creator { get; set; }
+        public RimotUser Creator { get; set; }
 
         public string CreatorId { get; set; }
 
