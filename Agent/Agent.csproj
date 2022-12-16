@@ -7,9 +7,9 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright ©  2022 Qits Software</Copyright>
     <Description>Background service that maintains a connection to the Rimot server.  The service is used for remote support and maintenance by this computer's administrators.</Description>
-    <Authors>Jared Goodwin</Authors>
+    <Authors>Smoke Head</Authors>
     <Product>Rimot Agent</Product>
-    <Company>Translucency Software</Company>
+    <Company>Qits Software</Company>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <PackageProjectUrl>https://rimot.one</PackageProjectUrl>
     <Platforms>AnyCPU;x86;x64</Platforms>
