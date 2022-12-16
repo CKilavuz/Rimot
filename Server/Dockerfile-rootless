@@ -22,24 +22,24 @@ RUN \
   adduser --disabled-password --gecos '' -u 2001 remotely && \
   mkdir -p /var/www/remotely && \
   mkdir /config && \
-  wget -q https://github.com/immense/Remotely/releases/latest/download/Remotely_Server_Linux-x64.zip && \
-  unzip -o Remotely_Server_Linux-x64.zip -d /var/www/remotely && \
-  rm Remotely_Server_Linux-x64.zip && \
-  chown -R remotely:remotely /var/www/remotely
+  wget -q https://github.com/rimot-support/Rimot/releases/latest/download/Rimot_Server_Linux-x64.zip && \
+  unzip -o Rimot_Server_Linux-x64.zip -d /var/www/rimot && \
+  rm Rimot_Server_Linux-x64.zip && \
+  chown -R rimot:rimot /var/www/rimot
 
 RUN \
-  mkdir -p /remotely-data && \
-  sed -i 's/DataSource=Remotely.db/DataSource=\/remotely-data\/Remotely.db/' /var/www/remotely/appsettings.json && \
-  chown -R remotely:remotely /remotely-data
+  mkdir -p /rimot-data && \
+  sed -i 's/DataSource=Rimot.db/DataSource=\/rimot-data\/rimot.db/' /var/www/rimot/appsettings.json && \
+  chown -R rimot:rimot /rimot-data
 
-VOLUME "/remotely-data"
+VOLUME "/rimot-data"
 
-WORKDIR /var/www/remotely
+WORKDIR /var/www/rimot
 
 COPY DockerMain.sh /
 
 RUN chmod 755 /DockerMain.sh
 
-USER remotely
+USER rimot
 
 ENTRYPOINT ["/DockerMain.sh"]
