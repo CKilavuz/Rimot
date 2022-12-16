@@ -40,7 +40,7 @@ namespace Rimot.Shared.Models
 
         public string RelayCode { get; set; }
 
-        public ICollection<RemotelyUser> RemotelyUsers { get; set; }
+        public ICollection<RimotUser> RimotUsers { get; set; }
         public ICollection<SharedFile> SharedFiles { get; set; }
     }
 }
