@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Shared.ViewModels
+namespace Rimot.Shared.ViewModels
 {
     public class ChatHistoryItem
     {
