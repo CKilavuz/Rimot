@@ -1,9 +1,9 @@
 ﻿using Remotely.Shared.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace Remotely.Shared.Models
+namespace Rimot.Shared.Models
 {
-    public class RemotelyUserOptions
+    public class RimotUserOptions
     {
         [Display(Name = "Display Name")]
         [StringLength(100)]
