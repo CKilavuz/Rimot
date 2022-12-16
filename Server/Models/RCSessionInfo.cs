@@ -1,8 +1,8 @@
-﻿using Remotely.Shared.Enums;
+﻿using Rimot.Shared.Enums;
 using System;
 using System.Collections.Concurrent;
 
-namespace Remotely.Server.Models
+namespace Rimot.Server.Models
 {
     public class RCSessionInfo
     {
