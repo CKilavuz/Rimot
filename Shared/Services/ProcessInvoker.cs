@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
-using Remotely.Shared.Utilities;
+using Rimot.Shared.Utilities;
 
-namespace Remotely.Shared.Services
+namespace Rimot.Shared.Services
 {
     public interface IProcessInvoker
     {
