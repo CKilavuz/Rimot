@@ -1,12 +1,12 @@
-﻿using Remotely.Shared.Enums;
-using Remotely.Shared.Models;
+﻿using Rimot.Shared.Enums;
+using Rimot.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Shared.Utilities
+namespace Rimot.Shared.Utilities
 {
     public static class Time
     {
