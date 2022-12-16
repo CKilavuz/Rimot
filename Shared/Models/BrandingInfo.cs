@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Shared.Models
+namespace Rimot.Shared.Models
 {
     public class BrandingInfo
     {
@@ -19,17 +19,17 @@ namespace Remotely.Shared.Models
 
         public byte[] Icon { get; set; }
 
-        public byte TitleForegroundRed { get; set; } = 29;
+        public byte TitleForegroundRed { get; set; } = 255;
 
-        public byte TitleForegroundGreen { get; set; } = 144;
+        public byte TitleForegroundGreen { get; set; } = 255;
 
-        public byte TitleForegroundBlue { get; set; } = 241;
+        public byte TitleForegroundBlue { get; set; } = 255;
 
-        public byte TitleBackgroundRed { get; set; } = 70;
+        public byte TitleBackgroundRed { get; set; } = 255;
 
-        public byte TitleBackgroundGreen { get; set; } = 70;
+        public byte TitleBackgroundGreen { get; set; } = 0;
 
-        public byte TitleBackgroundBlue { get; set; } = 70;
+        public byte TitleBackgroundBlue { get; set; } = 0;
 
         public byte ButtonForegroundRed { get; set; } = 255;
 
