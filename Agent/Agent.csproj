@@ -11,7 +11,7 @@
     <Product>Rimot Agent</Product>
     <Company>Qits Software</Company>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <PackageProjectUrl>https://rimot.one</PackageProjectUrl>
+    <PackageProjectUrl>https://rimot.support</PackageProjectUrl>
     <Platforms>AnyCPU;x86;x64</Platforms>
     <AssemblyName>Rimot_Agent</AssemblyName>
     <RootNamespace>Rimot.Agent</RootNamespace>
