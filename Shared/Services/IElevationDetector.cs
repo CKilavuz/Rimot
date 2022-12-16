@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Remotely.Shared.Services
+namespace Rimot.Shared.Services
 {
     public interface IElevationDetector
     {
