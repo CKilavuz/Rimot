@@ -355,10 +355,6 @@ namespace Rimot.Tests
             var resourceImage = (Bitmap)Bitmap.FromStream(mrs);
 
             if (resourceImage.PixelFormat != PixelFormat.Format32bppArgb)
-        private SKBitmap GetImage(string imageFileName)
-        {
-            using var mrs = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Rimot.Desktop.Win.Tests.Resources.{imageFileName}.jpg");
-            var resourceImage = (Bitmap)Bitma
             {
                 return resourceImage
                     .Clone(new Rectangle(0, 0, resourceImage.Width, resourceImage.Height), PixelFormat.Format32bppArgb)
