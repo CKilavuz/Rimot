@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Remotely.Server.Models
+namespace Rimot.Server.Models
 {
     public class ModalButton
     {
