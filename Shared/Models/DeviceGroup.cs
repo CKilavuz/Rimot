@@ -24,7 +24,7 @@ namespace Rimot.Shared.Models
         public string OrganizationID { get; set; }
 
         [JsonIgnore]
-        public List<RemotelyUser> Users { get; set; }
+        public List<RimotUser> Users { get; set; }
 
         [JsonIgnore]
         public List<ScriptSchedule> ScriptSchedules { get; set; }
