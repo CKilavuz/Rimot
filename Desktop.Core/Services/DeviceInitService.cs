@@ -1,6 +1,6 @@
-﻿using Remotely.Desktop.Core.Interfaces;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.Models;
+﻿using Rimot.Desktop.Core.Interfaces;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,7 +14,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Remotely.Desktop.Core.Services
+namespace Rimot.Desktop.Core.Services
 {
     public interface IDeviceInitService
     {
