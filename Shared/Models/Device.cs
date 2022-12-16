@@ -1,4 +1,4 @@
-﻿using RimotRimot.Shared.Attributes;
+﻿using Rimot.Shared.Attributes;
 using Rimot.Shared.Enums;
 using System;
 using System.Collections.Generic;
