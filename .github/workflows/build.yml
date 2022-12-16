@@ -109,7 +109,7 @@ jobs:
       with:
         # Comment out the below 'repository' line if you want to build from
         # your fork instead of the author's.
-        repository: lucent-sea/Rimot
+        repository: rimot-supoort/Rimot
         fetch-depth: 0
 
     # Test the Server URL to make sure it's valid
@@ -117,7 +117,7 @@ jobs:
       run: |
         $Result = ""
         if (![System.Uri]::TryCreate($env:ServerUrl, [System.UriKind]::Absolute, [ref] $Result)) {
-            throw "Server URL is not in the correct format.  It should be fully qualified with scheme and host (e.g. https://app.rimot.one)."
+            throw "Server URL is not in the correct format.  It should be fully qualified with scheme and host (e.g. https://app.rimot.aupport)."
         }
         
         
