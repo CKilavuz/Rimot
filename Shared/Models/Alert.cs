@@ -23,7 +23,7 @@ namespace Rimot.Shared.Models
         public string OrganizationID { get; set; }
 
         [JsonIgnore]
-        public RemotelyUser User { get; set; }
+        public RimotUser User { get; set; }
         public string UserID { get; set; }
         public string Details { get; set; }
     }
