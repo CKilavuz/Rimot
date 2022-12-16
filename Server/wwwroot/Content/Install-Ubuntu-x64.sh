@@ -11,9 +11,9 @@ ArgLength=${#Args[@]}
 for (( i=0; i<${ArgLength}; i+=2 ));
 do
     if [ "${Args[$i]}" = "--uninstall" ]; then
-        systemctl stop remotely-agent
-        rm -r -f /usr/local/bin/Remotely
-        rm -f /etc/systemd/system/remotely-agent.service
+        systemctl stop rimot-agent
+        rm -r -f /usr/local/bin/Rimot
+        rm -f /etc/systemd/system/rimot-agent.service
         systemctl daemon-reload
         exit
     elif [ "${Args[$i]}" = "--path" ]; then
@@ -42,32 +42,32 @@ apt-get -y install jq
 apt-get -y install curl
 
 
-if [ -f "/usr/local/bin/Remotely/ConnectionInfo.json" ]; then
-    SavedGUID=`cat "/usr/local/bin/Remotely/ConnectionInfo.json" | jq -r '.DeviceID'`
+if [ -f "/usr/local/bin/Rimot/ConnectionInfo.json" ]; then
+    SavedGUID=`cat "/usr/local/bin/Rimot/ConnectionInfo.json" | jq -r '.DeviceID'`
      if [[ "$SavedGUID" != "null" && -n "$SavedGUID" ]]; then
         GUID="$SavedGUID"
     fi
 fi
 
-rm -r -f /usr/local/bin/Remotely
-rm -f /etc/systemd/system/remotely-agent.service
+rm -r -f /usr/local/bin/Rimot
+rm -f /etc/systemd/system/rimot-agent.service
 
-mkdir -p /usr/local/bin/Remotely/
-cd /usr/local/bin/Remotely/
+mkdir -p /usr/local/bin/Rimot/
+cd /usr/local/bin/Rimot/
 
 if [ -z "$UpdatePackagePath" ]; then
-    echo  "Downloading client..." >> /tmp/Remotely_Install.log
-    wget $HostName/Content/Remotely-Linux.zip
+    echo  "Downloading client..." >> /tmp/Rimot_Install.log
+    wget $HostName/Content/Rimot-Linux.zip
 else
-    echo  "Copying install files..." >> /tmp/Remotely_Install.log
-    cp "$UpdatePackagePath" /usr/local/bin/Remotely/Remotely-Linux.zip
+    echo  "Copying install files..." >> /tmp/Rimot_Install.log
+    cp "$UpdatePackagePath" /usr/local/bin/Rimot/Rimot-Linux.zip
     rm -f "$UpdatePackagePath"
 fi
 
-unzip ./Remotely-Linux.zip
-rm -f ./Remotely-Linux.zip
-chmod +x ./Remotely_Agent
-chmod +x ./Desktop/Remotely_Desktop
+unzip ./Rimot-Linux.zip
+rm -f ./Rimot-Linux.zip
+chmod +x ./Rimot_Agent
+chmod +x ./Desktop/Rimot_Desktop
 
 
 connectionInfo="{
@@ -79,16 +79,16 @@ connectionInfo="{
 
 echo "$connectionInfo" > ./ConnectionInfo.json
 
-curl --head $HostName/Content/Remotely-Linux.zip | grep -i "etag" | cut -d' ' -f 2 > ./etag.txt
+curl --head $HostName/Content/Rimot-Linux.zip | grep -i "etag" | cut -d' ' -f 2 > ./etag.txt
 
-echo Creating service... >> /tmp/Remotely_Install.log
+echo Creating service... >> /tmp/Rimot_Install.log
 
 serviceConfig="[Unit]
-Description=The Remotely agent used for remote access.
+Description=The Rimot agent used for remote access.
 
 [Service]
-WorkingDirectory=/usr/local/bin/Remotely/
-ExecStart=/usr/local/bin/Remotely/Remotely_Agent
+WorkingDirectory=/usr/local/bin/Rimot/
+ExecStart=/usr/local/bin/Rimot/Rimot_Agent
 Restart=always
 StartLimitIntervalSec=0
 RestartSec=10
@@ -96,9 +96,9 @@ RestartSec=10
 [Install]
 WantedBy=graphical.target"
 
-echo "$serviceConfig" > /etc/systemd/system/remotely-agent.service
+echo "$serviceConfig" > /etc/systemd/system/rimot-agent.service
 
-systemctl enable remotely-agent
-systemctl restart remotely-agent
+systemctl enable rimot-agent
+systemctl restart rimot-agent
 
-echo Install complete. >> /tmp/Remotely_Install.log
+echo Install complete. >> /tmp/Rimot_Install.log
