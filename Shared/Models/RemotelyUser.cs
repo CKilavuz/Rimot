@@ -23,6 +23,6 @@ namespace Rimot.Shared.Models
 
         public string TempPassword { get; set; }
 
-        public RemotelyUserOptions UserOptions { get; set; }
+        public RimotUserOptions UserOptions { get; set; }
     }
 }
