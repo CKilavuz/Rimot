@@ -1,7 +1,7 @@
-﻿using Remotely.Shared.Enums;
+﻿using Rimot.Shared.Enums;
 using System.Runtime.Serialization;
 
-namespace Remotely.Shared.Models.RemoteControlDtos
+namespace Rimot.Shared.Models.RemoteControlDtos
 {
     [DataContract]
     public class KeyPressDto : BaseDto
