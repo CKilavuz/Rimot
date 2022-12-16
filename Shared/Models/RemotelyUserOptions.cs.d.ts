@@ -1,4 +1,4 @@
-	interface remotelyUserOptions {
+	interface rimotUserOptions {
 		displayName: string;
 		commandModeShortcutPSCore: string;
 		commandModeShortcutWinPS: string;
