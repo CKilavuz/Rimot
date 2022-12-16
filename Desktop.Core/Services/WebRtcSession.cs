@@ -1,15 +1,15 @@
 ﻿using MessagePack;
 using Microsoft.MixedReality.WebRTC;
-using Remotely.Shared.Utilities;
-using Remotely.Shared.Models;
-using Remotely.Shared.Models.RemoteControlDtos;
+using Rimot.Shared.Utilities;
+using Rimot.Shared.Models;
+using Rimot.Shared.Models.RemoteControlDtos;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Remotely.Desktop.Core.Services
+namespace Rimot.Desktop.Core.Services
 {
     public class WebRtcSession : IDisposable
     {
