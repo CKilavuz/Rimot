@@ -38,8 +38,8 @@ namespace Server.Installer.Services
                 ConsoleHelper.WriteLine("Downloading pre-built server package.");
 
                 var releaseFile = cliParams.WebServer == WebServerType.IisWindows ?
-                    "https://github.com/immense/Rimot/releases/latest/download/Rimot_Server_Win-x64.zip" :
-                    "https://github.com/immense/Rimot/releases/latest/download/Rimot_Server_Linux-x64.zip";
+                    "https://github.com/rimot-support/Rimot/releases/latest/download/Rimot_Server_Win-x64.zip" :
+                    "https://github.com/rimot-support/Rimot/releases/latest/download/Rimot_Server_Linux-x64.zip";
 
                 using var httpClient = new HttpClient();
                 var response = await httpClient.GetAsync(releaseFile);
