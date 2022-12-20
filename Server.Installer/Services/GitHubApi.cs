@@ -113,7 +113,7 @@ namespace Server.Installer.Services
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<GitHubReleasesResponsePayload>("https://api.github.com/repos/rimot-suport/Rimot/releases/latest");
+                var response = await _httpClient.GetFromJsonAsync<GitHubReleasesResponsePayload>("https://api.github.com/repos/rimot-support/Rimot/releases/latest");
                 return response.tag_name;
             }
             catch (Exception ex)
