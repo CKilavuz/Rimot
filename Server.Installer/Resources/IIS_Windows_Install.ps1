@@ -2,7 +2,7 @@
 .SYNOPSIS
    Configures IIS and installs the Rimot server.
 .COPYRIGHT
-   Copyright ©  2020 Translucency Software.  All rights reserved.
+   Copyright ©  2020 Qits Software.  All rights reserved.
 #>
 param (
     # The host name (excluding scheme) for the server that will run Rimot.
