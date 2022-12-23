@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using Rimot.Shared.Utilities;
 using System;
 using System.Diagnostics;
@@ -25,9 +25,9 @@ namespace Rimot.Agent.Services
             }
             else if (EnvironmentHelper.IsLinux)
             {
-                Process.Start("sudo", "systemctl stop remotely-agent").WaitForExit();
+                Process.Start("sudo", "systemctl stop rimot-agent").WaitForExit();
                 Directory.Delete("/usr/local/bin/Rimot", true);
-                File.Delete("/etc/systemd/system/remotely-agent.service");
+                File.Delete("/etc/systemd/system/rimot-agent.service");
                 Process.Start("sudo", "systemctl daemon-reload").WaitForExit();
             }
             Environment.Exit(0);
