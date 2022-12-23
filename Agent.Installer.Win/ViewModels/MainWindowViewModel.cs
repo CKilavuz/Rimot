@@ -335,7 +335,7 @@ namespace Rimot.Agent.Installer.Win.ViewModels
                 (serverUri.Scheme != Uri.UriSchemeHttp && serverUri.Scheme != Uri.UriSchemeHttps))
             {
                 Logger.Write("ServerUrl is not valid.");
-                MessageBoxEx.Show("Server URL must be a valid Uri (e.g. https://app.rimot.one).", "Invalid Server URL", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBoxEx.Show("Server URL must be a valid Uri (e.g. https://rimot.support).", "Invalid Server URL", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
 
