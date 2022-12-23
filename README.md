@@ -7,6 +7,8 @@ A remote control and remote scripting solution, built with .NET 6, Blazor, Signa
 Rimot Support is the proud new owner of Rimot. We intend to keep Rimot fully open-source.
 
 I (SB) had followed this project since the moment Jared shared it on r/msp years ago. While Jared was writing Rimot, we were writing our own tool for MSPs called ImmyBot, primarily focused on automation and software deployment. Jared and I had similar goals and he felt that we would be good custodians of the project. 
+
+# Rimot Support Portal
 ![image](.github/media/ask-remote.png)
 
 ## Disclaimer
