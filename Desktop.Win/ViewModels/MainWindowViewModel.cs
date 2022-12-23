@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Rimot.Desktop.Core;
 using Rimot.Desktop.Core.Interfaces;
 using Rimot.Desktop.Core.Services;
@@ -281,7 +281,7 @@ namespace Rimot.Desktop.Win.ViewModels
                 (serverUri.Scheme != Uri.UriSchemeHttp && serverUri.Scheme != Uri.UriSchemeHttps))
             {
                 Logger.Write("Server URL is not valid.");
-                MessageBox.Show("Server URL must be a valid Uri (e.g. https://app.rimot.one).", "Invalid Server URL", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Server URL must be a valid Uri (e.g. https://rimot.support).", "Invalid Server URL", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
