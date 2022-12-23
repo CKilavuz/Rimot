@@ -1,4 +1,4 @@
-﻿import * as UI from "./UI.js";
+import * as UI from "./UI.js";
 import { BaseDtoType } from "./Enums/BaseDtoType.js";
 import { BaseDto } from "./Interfaces/BaseDto.js";
 import { ViewerApp } from "./App.js";
@@ -69,7 +69,7 @@ export class DtoMessageHandler {
         ReceiveFile(file);
     }
     HandleScreenData(screenDataDto: ScreenDataDto) {
-        document.title = `${screenDataDto.MachineName} - Remotely Session`;
+        document.title = `${screenDataDto.MachineName} - Rimot Session`;
         UI.ToggleConnectUI(false);
         UI.SetScreenSize(screenDataDto.ScreenWidth, screenDataDto.ScreenHeight);
         UI.UpdateDisplays(screenDataDto.SelectedDisplay, screenDataDto.DisplayNames);
