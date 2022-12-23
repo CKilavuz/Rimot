@@ -3,26 +3,18 @@ A remote control and remote scripting solution, built with .NET 6, Blazor, Signa
 
 
 # Status 
-## 2022-05-19
-Immense Networks is the proud new owner of Remotely. We intend to keep Remotely fully open-source.
+## 2022-12-22
+Rimot Support is the proud new owner of Rimot. We intend to keep Rimot fully open-source.
 
-I (Darren Kattan) had followed this project since the moment Jared shared it on r/msp years ago. While Jared was writing Remotely, we were writing our own tool for MSPs called ImmyBot, primarily focused on automation and software deployment. Jared and I had similar goals and he felt that we would be good custodians of the project. 
-
-ImmyBot experienced explosive growth this year and we only have 4 developers which is why there hasn't been much activity here. We did a big push earlier this year to build an integration between Remotely and ImmyBot but ran into some technical challenges trying to keep only one agent on machines, but we don't want to cannibalize Remotely for the gain of ImmyBot. We want to keep Remotely fully operable as a standalone project. When we resume this initiate later this year, you will likely abstraction of the Remotely.Desktop code into a shared library that can be consumed by Remotely as well as other agents like ImmyBot.
-
-
-# Roadmap
-
-* Complete Remotely <-> ImmyBot Integration (2022)
-* Offer a cloud version of Remotely for individuals that do not wish to host it themselves (2023)
+I (SB) had followed this project since the moment Jared shared it on r/msp years ago. While Jared was writing Rimot, we were writing our own tool for MSPs called ImmyBot, primarily focused on automation and software deployment. Jared and I had similar goals and he felt that we would be good custodians of the project. 
 
 ![image](.github/media/ask-remote.png)
 
 ## Disclaimer
-Hosting a Remotely server requires running an ASP.NET Core web app behind IIS (Windows), Nginx (Ubuntu), or Caddy Server (any OS).  It's expected that the person deploying and maintaining the server is familiar with this process.  Since this is a hobby project that I develop in between working full time and raising a family, there simply isn't time available to provide support in this capacity.
+Hosting a Rimot server requires running an ASP.NET Core web app behind IIS (Windows), Nginx (Ubuntu), or Caddy Server (any OS).  It's expected that the person deploying and maintaining the server is familiar with this process.  Since this is a hobby project that I develop in between working full time and raising a family, there simply isn't time available to provide support in this capacity.
 
 ## GitHub Actions
-GitHub Actions allows you to build and deploy Remotely for free from their cloud servers.  Since the Windows agent can only be built on Windows, and the Mac agent can only be built on Mac, using a build platform like GitHub Actions or Azure Pipelines is the only reasonable way to build the whole project.  The definitions for the build processes are located in `/.github/workflows/` folder.
+GitHub Actions allows you to build and deploy Rimot for free from their cloud servers.  Since the Windows agent can only be built on Windows, and the Mac agent can only be built on Mac, using a build platform like GitHub Actions or Azure Pipelines is the only reasonable way to build the whole project.  The definitions for the build processes are located in `/.github/workflows/` folder.
 
 I've created a cross-platform command line tool that can leverage the GitHub Actions REST API to build the project and install it on your private server.  This process will also embed your server's URL into the desktop clients, so that they won't need to prompt the end user to enter it.
 
@@ -32,9 +24,9 @@ However, you can also choose to install the pre-built packages that do not have 
 
 ## Installation Instructions:
 - Before attempting installation, verify that your domain name is resolving to your server's IP address.
-  - For example, I can use the command `ping remotely.lucency.co` and see the IP address to which it resolves.
-- Find and download the `Remotely_Server_Installer[.exe]` CLI tool for the latest release on the [Releases page](https://github.com/immense/Remotely/releases).
-  - You will run it on the server where you'll be hosting Remotely.
+  - For example, I can use the command `ping rimot.lucency.co` and see the IP address to which it resolves.
+- Find and download the `Remotely_Server_Installer[.exe]` CLI tool for the latest release on the [Releases page](https://github.com/rimot-support/Rimot/releases).
+  - You will run it on the server where you'll be hosting Rimot.
   - You need to run it with elevation (e.g. sudo or "Run as admin").
   - Use `--help` argument to see all the command line arguments.
     - If values are provided for all arguments, it will run non-interactive.
@@ -46,9 +38,9 @@ However, you can also choose to install the pre-built packages that do not have 
   - If you've already forked the repo and haven't updated your fork recently, you'll need to do so first.
   - You can use the following commands to pull the latest changes, merge them, and push them back up to your repo ([git](https://git-scm.com/downloads) required).  Make sure to replace `{your-username}` with your GitHub username.  This example assumes you've added your SSH key to your GitHub account.
 	```
-	git clone git@github.com:{your-username}/remotely
-	cd ./remotely
-	git remote add upstream https://github.com/immense/Remotely
+	git clone git@github.com:{your-username}/rimot
+	cd ./rimot
+	git remote add upstream https://github.com/rimot-support/Rimot
 	git pull upstream master
 	git push origin master
 	```
@@ -70,7 +62,7 @@ However, you can also choose to install the pre-built packages that do not have 
   - For Windows IIS, you'll need to use a separate program that integrates with Let's Encrypt.
     - Resources: https://letsencrypt.org/docs/client-options/#clients-windows-/-iis
 - By default, SQLite is used for the database.
-    - The "Remotely.db" database file is automatically created in the root folder of your site.
+    - The "Rimot.db" database file is automatically created in the root folder of your site.
 	- You can browse and modify the contents using [DB Browser for SQLite](https://sqlitebrowser.org/).
 - Create your account by clicking the `Register` button on the main page.
   - This account will be both the server admin and organization admin.
@@ -86,7 +78,7 @@ However, you can also choose to install the pre-built packages that do not have 
 	* Run one of the GitHub Actions workflows, then copy the ZIP contents to the site's content folder.
 	* Build from source as described above and `rsync`/`robocopy` the output files to the server directory.
 	* Build from source and deploy to IIS (e.g. `dotnet publish /p:PublishProfile=MyProfile`)
-* For Linux, you'll need to restart the Remotely service in systemd after overwriting the files.
+* For Linux, you'll need to restart the Rimot service in systemd after overwriting the files.
 * For Windows, you'll need to shut down the site's Application Pool in IIS before copying the files.
 	* Windows won't let you overwrite files that are in use.
 * The only things that shouldn't be overwritten are the database DB file (if using SQLite) and the `appsettings.Production.json`.  These files should never exist in the publish output.
@@ -97,7 +89,7 @@ There are countless ways to host an ASP.NET Core app, and I can't document or au
 
 
 ## Build and Debug Instructions (Windows 10)  
-The following steps will configure your Windows 10 machine for building the Remotely server and clients.
+The following steps will configure your Windows 10 machine for building the Rimot server and clients.
 * Install Visual Studio 2019.
     * Link: https://visualstudio.microsoft.com/downloads/
 	* You should have the following Workloads selected:
@@ -114,7 +106,7 @@ The following steps will configure your Windows 10 machine for building the Remo
     * Link: https://git-scm.com/downloads
 * Install the latest LTS Node:
 	* Link: https://nodejs.org/
-* Clone the git repository: `git clone https://github.com/immense/Remotely`
+* Clone the git repository: `git clone https://github.com/rimot-support/Rimot`
 * When debugging, the agent will use a pre-defined device ID and connect to https://localhost:5001.
 * In development environment, the server will assign all connecting agents to the first organization.
 * The above two allow you to debug the agent and server together, and see your device in the list.
@@ -148,7 +140,7 @@ For more information on configuring ASP.NET Core, see https://docs.microsoft.com
 * EnableWindowsEventLog: Whether to also add server log entries to the Windows Event Log.
 * EnforceAttendedAccess: Clients will be prompted to allow unattended remote control attempts.
 * IceServers: The ICE (STUN/TURN) servers to use for WebRTC.
-* KnownProxies: If your reverse proxy is on a different machine and is forwarding requests to the Remotely server, you will need to add the IP of the reverse proxy server to this array.
+* KnownProxies: If your reverse proxy is on a different machine and is forwarding requests to the Rimot server, you will need to add the IP of the reverse proxy server to this array.
 * MaxOrganizationCount: By default, one organization can exist on the server, which is created automatically when the first account is registered.  Afterward, self-registration will be disabled.
     * Set this to -1 or increase it to a specific number to allow multi-tenancy.
 * RedirectToHttps: Whether ASP.NET Core will redirect all traffic from HTTP to HTTPS.  This is independent of Caddy, Nginx, and IIS configurations that do the same.
@@ -165,7 +157,7 @@ For more information on configuring ASP.NET Core, see https://docs.microsoft.com
 
 
 ## Changing the Database
-By default, Remotely uses a SQLite database.  When first run, it creates a file as specified for the SQLite connection string in appsettings.json.
+By default, Rimot uses a SQLite database.  When first run, it creates a file as specified for the SQLite connection string in appsettings.json.
 
 You can change database by changing `DBProvider` in `ApplicationOptions` to `SQLServer` or `PostgreSQL`.  Be sure to set the connection string for the new database provider in the server's `appsettings.Production.json`.
 
@@ -202,7 +194,7 @@ Ideally, you'd be doing remote control from an actual computer or laptop.  Howev
 ## End User Support Page
 There's a page at `/GetSupport` where end users can request support.  When the form is submitted, an alert appears on the main page, above the grid.
 
-A shortcut to this page is placed in the `\Program Files\Remotely\` folder.  You can copy it anywhere you like.  You can also have it copied to the desktop automatically by using the `-supportshortcut` switch on the installer.
+A shortcut to this page is placed in the `\Program Files\Rimot\` folder.  You can copy it anywhere you like.  You can also have it copied to the desktop automatically by using the `-supportshortcut` switch on the installer.
 	
 ## .NET Deployments
 * .NET has two methods of deployment: framework-dependent and self-contained.
@@ -219,7 +211,7 @@ There are a few shortcut keys available when using the console.
 * Ctrl + Q: Clear the output window.
 
 ## Port Configuration
-You can change the local port that the Remotely .NET server listens on by adding the below to `appsettings.Production.json`:
+You can change the local port that the Rimot .NET server listens on by adding the below to `appsettings.Production.json`:
 
 ```
 "Kestrel": {
@@ -236,9 +228,9 @@ Alternatively, you can use a command-line argument for the `Remotely_Server` pro
   - `ASPNETCORE_URLS=http://localhost:{port-number}`
 
 ## API and Integrations
-Remotely has a basic API, which can be browsed at https://remotely.lucency.co/swagger (or your own server instance).  Most endpoints require authentication via an API access token, which can be created by going to Account - API Access.
+Rimot has a basic API, which can be browsed at https://rimot.support/swagger (or your own server instance).  Most endpoints require authentication via an API access token, which can be created by going to Account - API Access.
 
-When accessing the API from the browser on another website, you'll need to set up CORS in appsettings by adding the website origin URL to the TrustedCorsOrigins array.  If you're not familiar with how CORS works, I recommend reading up on it before proceeding.  For example, if I wanted to create a login form on https://lucency.co that logged into the Remotely API, I'd need to add "https://lucency.co" to the TrustedCorsOrigins.
+When accessing the API from the browser on another website, you'll need to set up CORS in appsettings by adding the website origin URL to the TrustedCorsOrigins array.  If you're not familiar with how CORS works, I recommend reading up on it before proceeding.  For example, if I wanted to create a login form on https://lucency.co that logged into the Rimot API, I'd need to add "https://lucency.co" to the TrustedCorsOrigins.
 
 The API key and secret must first be combined [ApiKey]:[ApiSecret] and then encoded with Base64 as [EncodedAuhorization]. After that you can add the encoded string to the request's Authorization header in the form "Basic [EncodedAuhorization]"
 
@@ -302,9 +294,9 @@ Below are examples of using the cookie-based login API (JavaScript):
 	})
 
 ## Alerts
-The Alerts API gives you the ability to add monitoring and alerting functionality to your device endpoints.  This feature is intended to add basic RMM-type functionality without diverging too far from Remotely's primary purpose.
+The Alerts API gives you the ability to add monitoring and alerting functionality to your device endpoints.  This feature is intended to add basic RMM-type functionality without diverging too far from Rimot's primary purpose.
 
-Alerts can be set up to show a notification on the Remotely website, send an email, and/or perform a separate API request.
+Alerts can be set up to show a notification on the Rimot website, send an email, and/or perform a separate API request.
 
 To use Alerts, you'd first need to make an API token (or multiple tokens) for your devices to use.  Then create a scheduled task or some other recurring script to do the work.  Below is an example of how to use PowerShell to create a Scheduled Job that checks the disk space on a daily schedule.
 
@@ -328,7 +320,7 @@ Register-ScheduledJob -ScriptBlock {
                 "ApiRequestUrl": null,
                 "EmailBody": "Low hard drive space for device Maker.",
                 "EmailSubject": "Hard Drive Space Alert",
-                "EmailTo": "translucency_software@outlook.com",
+                "EmailTo": "qits_software@outlook.com",
                 "ShouldAlert": true,
                 "ShouldEmail": true,
                 "ShouldSendApiRequest": false
