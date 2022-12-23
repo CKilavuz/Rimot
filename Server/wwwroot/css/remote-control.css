@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
@@ -159,7 +159,7 @@ button {
         width: 100%;
     }
 
-.remotely-header {
+.rimot-header {
     position: fixed;
     top: 15px;
     left: 15px;
