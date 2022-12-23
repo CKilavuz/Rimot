@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,7 +15,7 @@ namespace Rimot.Shared.Models
         public string Id { get; set; }
 
         [StringLength(25)]
-        public string Product { get; set; } = "Remotely";
+        public string Product { get; set; } = "Rimot";
 
         public byte[] Icon { get; set; }
 
