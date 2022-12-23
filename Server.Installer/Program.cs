@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Rimot.Shared.Enums;
 using Rimot.Shared.Services;
@@ -89,7 +89,7 @@ namespace Server.Installer
 
             while (cliParams.ServerUrl is null)
             {
-                var url = ConsoleHelper.ReadLine("What is your server's public URL (e.g. https://app.rimot.support)?").Trim();
+                var url = ConsoleHelper.ReadLine("What is your server's public URL (e.g. https://rimot.support)?").Trim();
                 if (Uri.TryCreate(url, UriKind.Absolute, out var serverUrl))
                 {
                     cliParams.ServerUrl = serverUrl;
@@ -270,7 +270,7 @@ namespace Server.Installer
                                     cliParams.ServerUrl = result;
                                     continue;
                                 }
-                                ConsoleHelper.WriteError("--server-url parameter is invalid.  Must be a valid URL (e.g. https://app.rimot.support).");
+                                ConsoleHelper.WriteError("--server-url parameter is invalid.  Must be a valid URL (e.g. https://rimot.support).");
                                 return false;
                             }
                         case "--install-directory":
@@ -333,7 +333,7 @@ namespace Server.Installer
             ConsoleHelper.WriteLine("\t--github-pat, -p    The GitHub Personal Access Token to use for authentication.  " +
                 "Create one at ttps://github.com/settings/tokens.", 1);
 
-            ConsoleHelper.WriteLine("\t--server-url, -s    The public URL where your Rimot server will be accessed (e.g. https://app.rimot.support).", 1);
+            ConsoleHelper.WriteLine("\t--server-url, -s    The public URL where your Rimot server will be accessed (e.g. https://rimot.support).", 1);
 
             ConsoleHelper.WriteLine("\t--install-directory, -i    The directory path where the server files will be installed (e.g. /var/www/rimot/).", 1);
             
@@ -351,10 +351,10 @@ namespace Server.Installer
                 "0 = Caddy on Ubuntu.  1 = Nginx on Ubuntu.  2 = Caddy on CentOS.  3 = Nginx on CentOS.  4 = IIS on Windows Server 2016+.", 1);
 
             ConsoleHelper.WriteLine("Example (build latest release):");
-            ConsoleHelper.WriteLine("sudo ./Rimot_Server_Installer -b false -u lucent-sea -p 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 -s https://app.rimot.support -i /var/www/rimot/ -r latest -c true -w 0", 1);
+            ConsoleHelper.WriteLine("sudo ./Rimot_Server_Installer -b false -u rimot-support -p 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 -s https://rimot.support -i /var/www/rimot/ -r latest -c true -w 0", 1);
 
             ConsoleHelper.WriteLine("Example (use pre-built package):");
-            ConsoleHelper.WriteLine("sudo ./Rimot_Server_Installer -b true -s https://app.rimot.support -i /var/www/rimot/ -w 0");
+            ConsoleHelper.WriteLine("sudo ./Rimot_Server_Installer -b true -s https://rimot.support -i /var/www/rimot/ -w 0");
         }
     }
 }
