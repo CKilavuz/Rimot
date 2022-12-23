@@ -1,4 +1,4 @@
-﻿using Avalonia.Collections;
+using Avalonia.Collections;
 using Avalonia.Controls;
 using Avalonia.Threading;
 using Microsoft.Extensions.DependencyInjection;
@@ -241,7 +241,7 @@ namespace Rimot.Desktop.XPlat.ViewModels
                 (serverUri.Scheme != Uri.UriSchemeHttp && serverUri.Scheme != Uri.UriSchemeHttps))
             {
                 Logger.Write("Server URL is not valid.");
-                await MessageBox.Show("Server URL must be a valid Uri (e.g. https://app.rimot.one).", "Invalid Server URL", MessageBoxType.OK);
+                await MessageBox.Show("Server URL must be a valid Uri (e.g. https://rimot.support).", "Invalid Server URL", MessageBoxType.OK);
                 return;
             }
 
