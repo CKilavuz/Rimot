@@ -19,7 +19,7 @@ RUN \
   apt-get -y install aspnetcore-runtime-6.0
 
 RUN \
-  mkdir -p /var/www/remotely && \
+  mkdir -p /var/www/rimot && \
   mkdir /config && \
   wget -q https://github.com/rimot-support/Rimot/releases/latest/download/Rimot_Server_Linux-x64.zip && \
   unzip -o Rimot_Server_Linux-x64.zip -d /var/www/rimot && \
