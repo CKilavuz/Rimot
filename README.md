@@ -3,11 +3,10 @@ A remote control and remote scripting solution, built with .NET 6, Blazor, Signa
 
 
 # Status 
-## 2022-12-22
+## 2022-05-19
 Rimot Support is the proud new owner of Rimot. We intend to keep Rimot fully open-source.
 
 I (SB) had followed this project since the moment Jared shared it on r/msp years ago. While Jared was writing Rimot, we were writing our own tool for MSPs called ImmyBot, primarily focused on automation and software deployment. Jared and I had similar goals and he felt that we would be good custodians of the project. 
-
 ![image](.github/media/ask-remote.png)
 
 ## Disclaimer
@@ -25,7 +24,7 @@ However, you can also choose to install the pre-built packages that do not have 
 ## Installation Instructions:
 - Before attempting installation, verify that your domain name is resolving to your server's IP address.
   - For example, I can use the command `ping rimot.lucency.co` and see the IP address to which it resolves.
-- Find and download the `Remotely_Server_Installer[.exe]` CLI tool for the latest release on the [Releases page](https://github.com/rimot-support/Rimot/releases).
+- Find and download the `Rimot_Server_Installer[.exe]` CLI tool for the latest release on the [Releases page](https://github.com/rimot-support/Rimot/releases).
   - You will run it on the server where you'll be hosting Rimot.
   - You need to run it with elevation (e.g. sudo or "Run as admin").
   - Use `--help` argument to see all the command line arguments.
@@ -162,8 +161,8 @@ By default, Rimot uses a SQLite database.  When first run, it creates a file as 
 You can change database by changing `DBProvider` in `ApplicationOptions` to `SQLServer` or `PostgreSQL`.  Be sure to set the connection string for the new database provider in the server's `appsettings.Production.json`.
 
 ## Logging
-* On clients, logs are kept in %temp%\Remotely_Logs.log.
-	* For the Agent running as a Windows service, this maps to C:\Windows\Temp\Remotely_Logs.log.
+* On clients, logs are kept in %temp%\Rimot_Logs.log.
+	* For the Agent running as a Windows service, this maps to C:\Windows\Temp\Rimot_Logs.log.
 * On the server, some event information is explicitly written to the EventLogs table in the database.
 * Built-in ASP.NET Core logs are written to the console (stdout).  You can redirect this to a file if desired.
 	* In IIS, this can be done in the web.config file by setting stdoutLogEnabled to true.
@@ -223,7 +222,7 @@ You can change the local port that the Rimot .NET server listens on by adding th
   }
 ```
 
-Alternatively, you can use a command-line argument for the `Remotely_Server` process or set an environment variable.
+Alternatively, you can use a command-line argument for the `Rimot_Server` process or set an environment variable.
   - `--urls http://localhost:{port-number}`
   - `ASPNETCORE_URLS=http://localhost:{port-number}`
 
