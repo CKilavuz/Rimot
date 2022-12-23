@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
@@ -22,12 +22,12 @@
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageId>Rimot Desktop</PackageId>
-    <Authors>Jared Goodwin</Authors>
+    <Authors>SB</Authors>
     <Company>Qits Software</Company>
     <Product>Rimot Desktop</Product>
     <Description>Desktop client for allowing your IT admin to provide remote support.</Description>
     <Copyright>Copyright ©  2021 Qits Software</Copyright>
-    <PackageProjectUrl>https://rimot.one</PackageProjectUrl>
+    <PackageProjectUrl>https://rimot.support</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="**\*.xaml.cs">
